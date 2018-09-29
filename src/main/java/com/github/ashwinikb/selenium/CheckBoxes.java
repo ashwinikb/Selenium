@@ -9,7 +9,7 @@ public class CheckBoxes {
 	public static void buttons() throws InterruptedException {
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://formy-project.herokuapp.com/checkbox");
-		
+
 		WebElement checkBox1 = driver.findElement(By.id("checkbox-1"));
 		checkBox1.click();
 		Thread.sleep(2000);

@@ -7,10 +7,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class DatePicker {
-	public static void date() throws InterruptedException  {
+	public static void date() throws InterruptedException {
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://formy-project.herokuapp.com/datepicker");
-	
+
 		WebElement datePic = driver.findElement(By.id("datepicker"));
 		Thread.sleep(2000);
 		datePic.sendKeys("5/5/2019");

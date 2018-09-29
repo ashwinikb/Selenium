@@ -6,10 +6,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class DropDown {
-	public static void menu() throws InterruptedException{
+	public static void menu() throws InterruptedException {
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://formy-project.herokuapp.com/dropdown");
-		
+
 		WebElement menu = driver.findElement(By.id("dropdownMenuButton"));
 		menu.click();
 		Thread.sleep(2000);

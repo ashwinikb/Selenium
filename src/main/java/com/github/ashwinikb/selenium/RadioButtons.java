@@ -18,5 +18,5 @@ public class RadioButtons {
 		Thread.sleep(2000);
 		WebElement radioButton3 = driver.findElement(By.cssSelector("input[value='option3']"));
 		radioButton3.click();
- 	}
+	}
 }

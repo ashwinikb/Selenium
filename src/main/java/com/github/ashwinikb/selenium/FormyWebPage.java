@@ -1,12 +1,11 @@
 package com.github.ashwinikb.selenium;
 
-
 public class FormyWebPage {
 
 	public static void main(String[] args) throws InterruptedException {
-		
+
 		System.setProperty("webdriver.chrome.driver", "/Users/ashwini/Downloads/chromedriver");
-		
+
 //		KeyPress.keyPressForm();
 //		Autocomplete.autoCompleteForm();
 //		SwitchWindow.switchwindows();
@@ -20,4 +19,4 @@ public class FormyWebPage {
 //		FileUpload.file();
 //		Form.formFill();
 	}
-} 
+}

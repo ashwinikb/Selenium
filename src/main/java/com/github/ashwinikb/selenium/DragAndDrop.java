@@ -13,9 +13,9 @@ public class DragAndDrop {
 		Thread.sleep(1000);
 
 		WebElement image = driver.findElement(By.id("image"));
-		
+
 		WebElement box = driver.findElement(By.id("box"));
-		
+
 		Actions actions = new Actions(driver);
 		Thread.sleep(1000);
 		actions.dragAndDrop(image, box).build().perform();

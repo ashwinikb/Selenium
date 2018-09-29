@@ -12,7 +12,7 @@ class FormTest {
 
 	@Test
 	void testFormFill() {
-		
+
 		driver.get("http://formy-project.herokuapp.com/form");
 
 		try {
@@ -25,7 +25,6 @@ class FormTest {
 		// wait for page to load;
 		assertEquals("The form was successfully submitted!", Form.alertText(driver));
 
-		
 	}
 
 	@Test
