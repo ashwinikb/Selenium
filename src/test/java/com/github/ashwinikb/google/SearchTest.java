@@ -1,25 +1,20 @@
 package com.github.ashwinikb.google;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.List;
 
-import org.junit.Before;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class SearchTest {
 
 	@Test
-	void searchTest() throws InterruptedException, MalformedURLException {
+	void search() throws InterruptedException, MalformedURLException {
 
 		// create a Chrome Web Driver
 		URL local = new URL("http://localhost:9515");
