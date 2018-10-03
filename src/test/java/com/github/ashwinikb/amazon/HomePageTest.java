@@ -33,7 +33,7 @@ public class HomePageTest {
 	@Test
 	void pageload() throws InterruptedException, MalformedURLException {
 
-		// open the browser and go to https://www.google.com
+		// open the browser and go to https://www.amazon.com
 		driver.get("https://www.amazon.com");
 
 		String actualTitle = driver.getTitle();
@@ -46,7 +46,7 @@ public class HomePageTest {
 	@Test
 	void search() throws InterruptedException, MalformedURLException {
 
-		// open the browser and go to https://www.google.com
+		// open the browser and go to https://www.amazon.com
 		driver.get("https://www.amazon.com");
 
 		driver.findElement(By.id("twotabsearchtextbox")).sendKeys("book");
