@@ -234,3 +234,6 @@ local.properties
 
 
 # End of https://www.gitignore.io/api/eclipse
+/.idea/workspace.xml
+/target/
+/src/main/java/report/testng.xml/
