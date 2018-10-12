@@ -238,3 +238,6 @@ local.properties
 /target/
 /src/main/java/report/testng.xml/
 /selenium-tests.iml
+/.idea/
+/.idea/misc.xml
+/.idea/vcs.xml
