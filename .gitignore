@@ -237,3 +237,4 @@ local.properties
 /.idea/workspace.xml
 /target/
 /src/main/java/report/testng.xml/
+/selenium-tests.iml
