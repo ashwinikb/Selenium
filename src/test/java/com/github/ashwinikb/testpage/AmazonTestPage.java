@@ -68,7 +68,7 @@ public class AmazonTestPage{
         actions.moveToElement(driver.findElement(By.xpath("//*[@id=\"nav-link-accountList\"]"))).perform();
         driver.findElement(By.xpath("//*[@id=\"nav-link-accountList\"]/span[1]")).click();
         driver.findElement(By.id("ap_email")).sendKeys("rosijohny1@gmail.com");
-        driver.findElement(By.id("ap_password")).sendKeys("puttabasavaiah");
+        driver.findElement(By.id("ap_password")).sendKeys("shopping");
         driver.findElement(By.id("signInSubmit")).click();
     }
 
@@ -83,6 +83,7 @@ public class AmazonTestPage{
         driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
         driver.findElement(By.xpath("//*[@id=\"widgetFilters\"]/div[5]/span[1]/div/a")).click();
         driver.switchTo().defaultContent();
+        driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
         driver.findElement(By.xpath("//*[@id=\"100_dealView_0\"]/div/div[2]/div/div/div[8]/div/span/span/span/button")).click();
         WebElement successMessageBox = driver.findElement(By.className("a-alert-content"));
         successMessageBox.isDisplayed();
@@ -94,21 +95,16 @@ public class AmazonTestPage{
         jse.executeScript("window.scrollBy(0,-250)", "");
         driver.findElement(By.id("nav-your-amazon-text")).click();
         driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-//        WebElement elements = driver.findElement(By.id("np-grid-wrapper"));
-//        List<WebElement> element = (List<WebElement>) driver.findElement(By.xpath("//*[@id=\"np-grid-wrapper\"]"));
         List<WebElement> allOptions = driver.findElements(By.xpath("/html/body/div[4]/div[2]/div[2]/div[6]/ul/div[7]/li/span/span/div[1]/div[2]"));
         for ( WebElement we: allOptions) {
             if ( we.getText().contains( "New Movie Releases in Amazon Video" )) {
                 driver.findElement( By.xpath("/html/body/div[4]/div[2]/div[2]/div[6]/ul/div[7]/li/span/span/div[2]")).click();
             }
         }
-//        JavascriptExecutor js = (JavascriptExecutor) driver;
-//        js.executeAsyncScript("window.scrollBy(0,100)");
-//        driver.switchTo().frame(driver.findElement(By.xpath("//*[@id=\"ysh-carousel\"]/div/div[3]/a[1]/span")));
-        driver.switchTo().frame(driver.findElement(By.className("expansion-container")));
-        driver.findElement(By.className("a-carousel-goto-nextpage feed-carousel-control feed-right")).click();
-//        driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-        driver.findElement(By.linkText("https://images-na.ssl-images-amazon.com/images/I/81%2BiPafP8tL._AC_UL220_SR165,220_.jpg")).click();
+          Actions action1 = new Actions(driver);
+          action1.moveToElement(driver.findElement(By.xpath("/html/body/div[4]/div[2]/div[2]/div[4]/ul/div[9]/div[2]/div/div[2]/div/div/div/ol/li[5]/div/div[1]/a/div[1]/img"))).click();
+          Assert.assertTrue(driver.getCurrentUrl().contains("https://www.amazon.com/Hotel-Transylvania-3-Bonus-Content/dp/B07FCW6RXT/ref=pd_ys_c_mepd_ys_sf_s_dnr_2858905011_4?_encoding=UTF8&pd_rd_i=B07FCW6RXT&pd_rd_r=QW103593ZSMP5EKYXMYD&pd_rd_w=vPDv1&pd_rd_wg=OnDWl&psc=1&refRID=VKN0Y2PDW17GFWKDTAY9"));
+
     }
 
 

@@ -48,6 +48,7 @@ public class DriverSetUp {
 
         this.driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         this.driver.manage().window().maximize();
+        this.driver.manage().deleteAllCookies();
         this.driver.get(baseUrl);
 
     }
