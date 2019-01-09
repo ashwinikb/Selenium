@@ -1,4 +1,4 @@
-package com.github.ashwinikb;
+package com.github.ashwinikb.amazon;
 
 import com.github.ashwinikb.DriverSetUp;
 import org.openqa.selenium.By;
@@ -13,7 +13,7 @@ import java.net.MalformedURLException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class AmazonTestPage {
+public class AmazonTests {
     public WebDriver driver;
 
     @BeforeClass(alwaysRun = true)
