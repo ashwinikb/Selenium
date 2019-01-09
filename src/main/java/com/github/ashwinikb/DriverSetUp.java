@@ -1,4 +1,4 @@
-package com.github.ashwinikb.driver;
+package com.github.ashwinikb;
 
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
