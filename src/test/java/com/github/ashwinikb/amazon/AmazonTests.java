@@ -24,7 +24,7 @@ public class AmazonTests {
     }
 
     @Test(priority = 1)
-    public void amazonTitleTest() {
+    public void titleTest() {
         // validate page title test
         Assert.assertTrue(driver.getTitle().contentEquals("Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more"));
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
@@ -32,14 +32,14 @@ public class AmazonTests {
     }
 
     @Test(priority = 2)
-    public void amazonUrlTest() {
+    public void urlTest() {
         // validate current url test
         Assert.assertTrue(driver.getCurrentUrl().contains("www.amazon.com"));
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
     @Test(priority = 3)
-    public void amazonSearchTextBox() {
+    public void searchTextBox() {
         WebElement searchBox = driver.findElement(By.id("twotabsearchtextbox"));
         searchBox.sendKeys("Toys");
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
