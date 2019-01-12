@@ -44,54 +44,8 @@ public class AmazonTests {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
+
     @Test(priority = 3)
-    public void searchTextBox() {
-        WebElement searchBox = driver.findElement(By.id("twotabsearchtextbox"));
-        searchBox.sendKeys("Toys");
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        WebElement searchButton = driver.findElement(By.cssSelector("input[type = 'submit']"));
-        searchButton.click();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        driver.navigate().back();
-    }
-
-    @Test(priority = 4)
-    public void SignIn() {
-        Actions action = new Actions(driver);
-        action.moveToElement(driver.findElement(By.xpath("//*[@id=\"nav-link-accountList\"]"))).perform();
-        driver.findElement(By.xpath("//*[@id=\"nav-link-accountList\"]/span[1]")).click();
-        driver.findElement(By.id("ap_email")).sendKeys("ashwini.ash87@gmail.com");
-        driver.findElement(By.id("ap_password")).sendKeys("ashwini");
-        driver.findElement(By.id("signInSubmit")).click();
-        WebElement errorMessageBox = driver.findElement(By.id("auth-warning-message-box"));
-        errorMessageBox.isDisplayed();
-        driver.navigate().to("https://www.amazon.com/");
-        Actions actions = new Actions(driver);
-        actions.moveToElement(driver.findElement(By.xpath("//*[@id=\"nav-link-accountList\"]"))).perform();
-        driver.findElement(By.xpath("//*[@id=\"nav-link-accountList\"]/span[1]")).click();
-        driver.findElement(By.id("ap_email")).sendKeys("rosijohny1@gmail.com");
-        driver.findElement(By.id("ap_password")).sendKeys("shopping");
-        driver.findElement(By.id("signInSubmit")).click();
-    }
-
-    @Test(priority = 5)
-    public void deals() {
-        driver.findElement(By.linkText("Today's Deals")).click();
-        driver.findElement(By.xpath("//*[@id=\"widgetFilters\"]/div[1]/div[2]/span[7]/div/label/input")).click();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,250)", "");
-        driver.findElement(By.xpath("//*[@id=\"widgetFilters\"]/div[4]/span[1]/div/a")).click();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.findElement(By.xpath("//*[@id=\"widgetFilters\"]/div[5]/span[1]/div/a")).click();
-        driver.switchTo().defaultContent();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.findElement(By.xpath("//*[@id=\"100_dealView_0\"]/div/div[2]/div/div/div[8]/div/span/span/span/button")).click();
-        WebElement successMessageBox = driver.findElement(By.className("a-alert-content"));
-        successMessageBox.isDisplayed();
-    }
-
-    @Test(priority = 6)
     public void myAmazon() {
         JavascriptExecutor jse = (JavascriptExecutor) driver;
         jse.executeScript("window.scrollBy(0,-250)", "");
@@ -110,7 +64,7 @@ public class AmazonTests {
     }
 
 
-    @Test(priority = 6)
+    @Test(priority = 4)
     @AfterClass(alwaysRun = true)
     public void closeBrowser() {
 
