@@ -1,5 +1,7 @@
 package com.github.ashwinikb;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -14,6 +16,8 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 public class DriverSetUp {
+    private static final Logger LOG = LogManager.getLogger(DriverSetUp.class);
+
     private WebDriver driver = null;
     private String browser = null;
     private String baseUrl = null;
