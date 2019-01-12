@@ -7,8 +7,8 @@
 #### Setup
     Selenium
         1. Start selenium Standalone or grid
-        2. Update selenium node host:port info in launchers under test/main/resources 
+        2. Update selenium node host:port info in launchers under src/test/resources 
                     
 #### Run
-    Launch tests using the launchers under test/main/resources
+    Launch tests using the launchers under src/test/resources
         
