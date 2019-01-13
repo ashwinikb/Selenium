@@ -244,3 +244,5 @@ local.properties
 
 # Ignore Mac OS X Files
 .DS_Store
+
+testng-output
