@@ -3,35 +3,55 @@
 <suite name="Amazon Tests" verbose="1" parallel="tests">
     <parameter name="url" value="https://www.amazon.com/"/>
     <parameter name="os" value="mac os x"/>
-    <parameter name="node" value="http://192.168.0.12:32769"/>
+    <parameter name="node" value="http://192.168.0.6:48392"/>
 
     <test name="Tests on Chrome" preserve-order="true" group-by-instances="true">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="com.github.ashwinikb.amazon.AmazonTests"/>
+            <class name="com.github.ashwinikb.amazon.HomePageTest"/>
+            <class name="com.github.ashwinikb.amazon.ProductPageTest"/>
+            <class name="com.github.ashwinikb.amazon.DealsTest"/>
+            <class name="com.github.ashwinikb.amazon.LoginTest"/>
+            <class name="com.github.ashwinikb.amazon.OtherTests"/>
+            <class name="com.github.ashwinikb.amazon.SearchTest"/>
         </classes>
+
     </test>
 
     <test name="Tests on Firefox" preserve-order="true" group-by-instances="true">
         <parameter name="browser" value="firefox"/>
         <classes>
-            <class name="com.github.ashwinikb.amazon.AmazonTests"/>
+            <class name="com.github.ashwinikb.amazon.HomePageTest"/>
+            <class name="com.github.ashwinikb.amazon.ProductPageTest"/>
+            <class name="com.github.ashwinikb.amazon.DealsTest"/>
+            <class name="com.github.ashwinikb.amazon.LoginTest"/>
+            <class name="com.github.ashwinikb.amazon.OtherTests"/>
+            <class name="com.github.ashwinikb.amazon.SearchTest"/>
         </classes>
     </test>
 
-    <!--<test name="Tests on Opera" preserve-order="true" group-by-instances="true">-->
-    <!--<parameter name="browser" value="opera"/>-->
-    <!--<classes>-->
-    <!--<class name="com.github.ashwinikb.amazon.AmazonTests-->
-    <!--</classes>-->
-    <!--</test>-->
-
+    <test name="Tests on Safari" preserve-order="true" group-by-instances="true">
+        <parameter name="browser" value="opera"/>
+        <classes>
+            <class name="com.github.ashwinikb.amazon.HomePageTest"/>
+            <class name="com.github.ashwinikb.amazon.ProductPageTest"/>
+            <class name="com.github.ashwinikb.amazon.DealsTest"/>
+            <class name="com.github.ashwinikb.amazon.LoginTest"/>
+            <class name="com.github.ashwinikb.amazon.OtherTests"/>
+            <class name="com.github.ashwinikb.amazon.SearchTest"/>
+        </classes>
+    </test>
 
     <test name="Tests on Safari" preserve-order="true" group-by-instances="true">
-    <parameter name="browser" value="safari"/>
-    <classes>
-    <class name="com.github.ashwinikb.amazon.AmazonTests"/>
-    </classes>
+        <parameter name="browser" value="safari"/>
+        <classes>
+            <class name="com.github.ashwinikb.amazon.HomePageTest"/>
+            <class name="com.github.ashwinikb.amazon.ProductPageTest"/>
+            <class name="com.github.ashwinikb.amazon.DealsTest"/>
+            <class name="com.github.ashwinikb.amazon.LoginTest"/>
+            <class name="com.github.ashwinikb.amazon.OtherTests"/>
+            <class name="com.github.ashwinikb.amazon.SearchTest"/>
+        </classes>
     </test>
 
 
