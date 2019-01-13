@@ -1,6 +1,6 @@
 # Selenium Tests [![Build Status](https://travis-ci.org/ashwinikb/selenium-tests.svg?branch=master)](https://travis-ci.org/ashwinikb/selenium-tests/)
 
-    Test cases for for the following
+    Test cases for the following
         1. Amazon web page
         2. Google search
 
