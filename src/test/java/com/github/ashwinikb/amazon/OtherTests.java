@@ -15,14 +15,14 @@ import java.net.MalformedURLException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class AmazonTests {
+public class OtherTests {
 
-    private static final Logger LOG = LogManager.getLogger(AmazonTests.class);
+    private static final Logger LOG = LogManager.getLogger(OtherTests.class);
 
     public WebDriver driver;
 
-    @BeforeClass(alwaysRun = true)
     @Parameters({"os", "browser", "url", "node"})
+    @BeforeClass(alwaysRun = true)
     public void setUp(String os, String browser, String url, String node) throws MalformedURLException {
         DriverSetUp setupTestDriver = new DriverSetUp(os, browser, url, node);
         driver = setupTestDriver.getDriver();
